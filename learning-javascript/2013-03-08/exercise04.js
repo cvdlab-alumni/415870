@@ -1,5 +1,5 @@
 function select(data, key, values){
-	result = []
+	var result = []
 	for (i = 0; i < values.length; i++){
 		s = data.filter(function(item, index, array){
  			return (item[key] === values[i]);	//risultati per l'i-esimo valore di values
@@ -19,3 +19,11 @@ var data = [
 ];
 var key = 'name';
 var values = ['goofy', 'scrooge'];
+
+function best_select (data, key, values) {
+	return data.filter(function (item_data) {
+		return values.some(function (item_values) {
+			return item_data[key] === item_values;
+		})
+	})
+}
