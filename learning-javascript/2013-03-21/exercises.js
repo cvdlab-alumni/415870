@@ -18,7 +18,7 @@ function Edge(v1, v2){
 //Write a method length for Edge that compute the length of the edge.
 //2b
 Edge.prototype.length = function () {
-		return Math.sqrt(Math.pow((this.v1.x-v2.x),2) + Math.pow((this.v1.y-v2.y),2));
+		return Math.sqrt(Math.pow((this.v1.x-this.v2.x),2) + Math.pow((this.v1.y-this.v2.y),2));
 	};
 
 //Write a constructor function Trinagle that create a triangle given its three edges.
