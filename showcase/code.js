@@ -390,4 +390,3 @@ var arms = STRUCT([arm_dx_surface, arm_sx_surface, raccordo_dx, raccordo_sx]);
 var model = STRUCT([body, ears, hat, moustaches, all_teeth, profiles_single_tooths, lips, nose, all_eyes, shoes, arms]);
 model = R([0,1])([PI])(model)
 model = R([1,2])([PI])(model)
-DRAW(model)
