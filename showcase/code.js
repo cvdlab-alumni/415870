@@ -252,7 +252,7 @@ var profile_tooth_below_1 = BEZIER(S0)([[0.225, 1.15, 2.10], [0.225, 1.15, 2.30]
 
 var profile_tooth_below_2 = BEZIER(S0)([[-0.225, 1.15, 2.05], [-0.225, 1.15, 2.30], [-0.195, 1.15, 2.435]]);
 
-var profiles_single_tooths = STRUCT([MAP(profile_tooth_below_2)(domain1D), MAP(profile_tooth_below_1)(domain1D), 
+var profiles_single_teeth = STRUCT([MAP(profile_tooth_below_2)(domain1D), MAP(profile_tooth_below_1)(domain1D), 
 	MAP(profile_tooth_below_interm)(domain1D), MAP(profile_tooth_below_2)(domain1D), MAP(profile_tooth_below)(domain1D),
 	MAP(profile_tooth_above_2)(domain1D), MAP(profile_tooth_above_interm)(domain1D), MAP(profile_tooth_above)(domain1D)])
 //============================================================================================================================
@@ -387,6 +387,6 @@ raccordo_sx = T([0,1,2])([-1.8, 1, 0.78])(raccordo_sx);
 
 var arms = STRUCT([arm_dx_surface, arm_sx_surface, raccordo_dx, raccordo_sx]);
 //=====================================================================================================================================================
-var model = STRUCT([body, ears, hat, moustaches, all_teeth, profiles_single_tooths, lips, nose, all_eyes, shoes, arms]);
+var model = STRUCT([body, ears, hat, moustaches, all_teeth, profiles_single_teeth, lips, nose, all_eyes, shoes, arms]);
 model = R([0,1])([PI])(model)
 model = R([1,2])([PI])(model)
